@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    android:padding="30dp"
+    android:id="@+id/activity_signup"
+    tools:context=".SignupActivity">
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="107dp"
+        android:layout_height="50dp"
+        android:text="Sign  Up"
+        style="@style/bold"
+        android:textColor="@color/white"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/signupSpotifyTextInput"
+        android:layout_width="355dp"
+        android:layout_height="61dp"
+        android:hint="Spotify  User  Name"
+        android:fontFamily="@font/plusjakartasans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
+
+    <TextView
+        android:id="@+id/signupWelcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RhythmReport"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        style="@style/bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/signupEmailTextInput"
+        android:layout_width="355dp"
+        android:layout_height="61dp"
+        android:hint="Email"
+        android:fontFamily="@font/plusjakartasans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <TextView
+        android:id="@+id/signupEnterInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Please enter your information below to create an account."
+        android:textSize="20sp"
+        android:paddingTop="28dp"
+        android:paddingBottom="80dp"
+        style="@style/medium"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/signupPasswordTextInput"
+        android:layout_width="355dp"
+        android:layout_height="61dp"
+        android:hint="Password"
+        android:fontFamily="@font/plusjakartasans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/signupAgainPasswordTextInput"
+        android:layout_width="355dp"
+        android:layout_height="61dp"
+        android:hint="Re-type  your  password"
+        android:fontFamily="@font/plusjakartasans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537" />
+
+    <TextView
+        android:id="@+id/alreadyHaveTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already  have  an  account?  Log  in  here!"
+        android:textSize="16sp"
+        style="@style/regular"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <Button
+        android:id="@+id/toLoginButton"
+        android:layout_width="98dp"
+        android:layout_height="51dp"
+        android:text="Log  In"
+        style="@style/bold"
+        android:textColor="@color/white"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

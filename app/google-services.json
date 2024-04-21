@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "779891444061",
+    "project_id": "wrapped-25711",
+    "storage_bucket": "wrapped-25711.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779891444061:android:4b41efa37e74dbef4900b4",
+        "android_client_info": {
+          "package_name": "com.example.wrapped"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdcQaSn42gAJ1KQStyxDW2Bh6lcyJ5jXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
