@@ -2,12 +2,14 @@ package com.example.wrapped;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,43 @@ public class TopGenresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_genres);
 
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopGenre1 = findViewById(R.id.cardTopGenre1);
+        AnimationDrawable animationDrawable1 = (AnimationDrawable) cardTopGenre1.getBackground();
+        animationDrawable1.setEnterFadeDuration(1000);
+        animationDrawable1.setExitFadeDuration(1000);
+        animationDrawable1.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopGenre2 = findViewById(R.id.cardTopGenre2);
+        AnimationDrawable animationDrawable2 = (AnimationDrawable) cardTopGenre2.getBackground();
+        animationDrawable2.setEnterFadeDuration(1000);
+        animationDrawable2.setExitFadeDuration(1000);
+        animationDrawable2.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopGenre3 = findViewById(R.id.cardTopGenre3);
+        AnimationDrawable animationDrawable3 = (AnimationDrawable) cardTopGenre3.getBackground();
+        animationDrawable3.setEnterFadeDuration(1000);
+        animationDrawable3.setExitFadeDuration(1000);
+        animationDrawable3.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopGenre4 = findViewById(R.id.cardTopGenre4);
+        AnimationDrawable animationDrawable4 = (AnimationDrawable) cardTopGenre4.getBackground();
+        animationDrawable4.setEnterFadeDuration(1000);
+        animationDrawable4.setExitFadeDuration(1000);
+        animationDrawable4.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopGenre5 = findViewById(R.id.cardTopGenre5);
+        AnimationDrawable animationDrawable5 = (AnimationDrawable) cardTopGenre5.getBackground();
+        animationDrawable5.setEnterFadeDuration(1000);
+        animationDrawable5.setExitFadeDuration(1000);
+        animationDrawable5.start();
+
+
         String[] topArtists = getIntent().getStringArrayExtra("topArtists");
         String[] topArtistPics = getIntent().getStringArrayExtra("topArtistPics");
         String[] recArtists = getIntent().getStringArrayExtra("recArtists");
@@ -47,7 +86,7 @@ public class TopGenresActivity extends AppCompatActivity {
 
         playTrack(trackURIs[2]);
 
-        TextView topGenresTextView = findViewById(R.id.top_genres_text_view);
+        //TextView topGenresTextView = findViewById(R.id.top_genres_text_view);
         Button toTrackBtn = findViewById(R.id.to_track_btn);
 
         toTrackBtn.setOnClickListener(new View.OnClickListener() {
@@ -65,12 +104,34 @@ public class TopGenresActivity extends AppCompatActivity {
             }
         });
 
+        TextView topGenre1 = findViewById(R.id.topGenre1);
+        TextView topGenre2 = findViewById(R.id.topGenre2);
+        TextView topGenre3 = findViewById(R.id.topGenre3);
+        TextView topGenre4 = findViewById(R.id.topGenre4);
+        TextView topGenre5 = findViewById(R.id.topGenre5);
+
         if (topGenres != null) {
             String joinedTopGenres = TextUtils.join(", ", topGenres);
-            topGenresTextView.setText(joinedTopGenres);
+            //topGenresTextView.setText(joinedTopGenres);
+
+            String[] words = joinedTopGenres.split(", ");
+
+            topGenre1.setText("#1  " + words[0]);
+            topGenre2.setText("#2  " + words[1]);
+            topGenre3.setText("#3  " + words[2]);
+            topGenre4.setText("#4  " + words[3]);
+            topGenre5.setText("#5  " + words[4]);
+
         } else {
             String ans="No top genre data available";
-            topGenresTextView.setText(ans);
+            //topGenresTextView.setText(ans);
+
+            topGenre1.setText(ans);
+            topGenre2.setText(ans);
+            topGenre3.setText(ans);
+            topGenre4.setText(ans);
+            topGenre5.setText(ans);
+
         }
     }
 
