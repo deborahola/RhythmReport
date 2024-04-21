@@ -1,64 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    android:padding="30dp"
+    android:id="@+id/activity_main2"
     tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/token_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            tools:text="Token:" />
+            android:text="RhythmReport"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            style="@style/bold" />
 
         <TextView
-            android:id="@+id/top_artists_text_view"
+            android:id="@+id/ready_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
-            tools:text="Line 1\nLine 2\nLine 3" />
+            android:layout_marginTop="50dp"
+            android:text="Are  you  ready  to  see  your  music  insights?"
+            android:lineHeight="28dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="@style/semibold" />
 
-        <TextView
-            android:id="@+id/top_tracks_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            tools:text="Line 1\nLine 2\nLine 3" />
+        <Button
+            android:layout_width="50mm"
+            android:layout_height="11mm"
+            android:id="@+id/start_btn"
+            android:layout_marginTop="50dp"
+            android:text="Yes!  Let's  start!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
 
-        <TextView
-            android:id="@+id/top_genres_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            tools:text="Line 1\nLine 2\nLine 3" />
+        <Button
+            android:layout_width="50mm"
+            android:layout_height="11mm"
+            android:id="@+id/back_home"
+            android:layout_marginTop="35dp"
+            android:text="No  :(   Back  to  Home"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
 
-        <TextView
-            android:id="@+id/rec_artists_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            tools:text="Line 1\nLine 2\nLine 3" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/spotify_app_logo_transparent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/start_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:text="Get Started" />
-        </LinearLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity2">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/token_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            tools:text="Token:" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/top_artists_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:text="Line 1\nLine 2\nLine 3" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/top_tracks_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:text="Line 1\nLine 2\nLine 3" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/top_genres_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:text="Line 1\nLine 2\nLine 3" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rec_artists_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:text="Line 1\nLine 2\nLine 3" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/start_btn"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Get Started" />-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

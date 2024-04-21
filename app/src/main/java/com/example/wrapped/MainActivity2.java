@@ -2,6 +2,7 @@ package com.example.wrapped;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,15 +58,39 @@ public class MainActivity2 extends AppCompatActivity {
             topArtistPics, topTrackIds, topArtistIds, recArtists,trackURIs;
     String artistReqUrl;
 
+    Button backHome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+
+        RelativeLayout relativeLayout = findViewById(R.id.activity_main2);
+
+        // Animated gradient background that can change from one color to another
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(1000);
+        animationDrawable.setExitFadeDuration(1000);
+        animationDrawable.start();
+
+
         Button getStarted = findViewById(R.id.start_btn);
-        artistTextView = (TextView) findViewById(R.id.top_artists_text_view);
-        trackTextView = (TextView) findViewById(R.id.top_tracks_text_view);
-        genreTextView = (TextView) findViewById(R.id.top_genres_text_view);
-        recArtistTextView = (TextView) findViewById(R.id.rec_artists_text_view);
+//        artistTextView = (TextView) findViewById(R.id.top_artists_text_view);
+//        trackTextView = (TextView) findViewById(R.id.top_tracks_text_view);
+//        genreTextView = (TextView) findViewById(R.id.top_genres_text_view);
+//        recArtistTextView = (TextView) findViewById(R.id.rec_artists_text_view);
+
+        backHome = findViewById(R.id.back_home);
+
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TempActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,7 +193,7 @@ public class MainActivity2 extends AppCompatActivity {
                     artistReqUrl = "https://api.spotify.com/v1/recommendations?limit=20&seed_artists=" +
                             String.join(",", topArtistIds);
 
-                    setTextAsync(joinedArtistNames, artistTextView);
+                    //setTextAsync(joinedArtistNames, artistTextView);
 
                     createArtistRecRequest();
 
@@ -212,7 +238,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                     String joinedTrackNames = String.join(", ", topTracks);
 
-                    setTextAsync(joinedTrackNames, trackTextView);
+                    //setTextAsync(joinedTrackNames, trackTextView);
                 } catch (JSONException e) {
                     Log.d("JSON", "Failed to parse track data: " + e);
                     Toast.makeText(MainActivity2.this, "Failed to parse track data, watch Logcat for more details",
@@ -263,7 +289,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                     String joinedGenreNames = String.join(", ", topGenres);
 
-                    setTextAsync(joinedGenreNames, genreTextView);
+                    //setTextAsync(joinedGenreNames, genreTextView);
 
                 } catch (JSONException e) {
                     Log.d("JSON", "Failed to parse track data: " + e);
@@ -348,7 +374,7 @@ public class MainActivity2 extends AppCompatActivity {
                         joinedRecs += String.join(", ", recArtists);
                     }
 
-                    setTextAsync(joinedRecs, recArtistTextView);
+                    //setTextAsync(joinedRecs, recArtistTextView);
 
                 } catch (JSONException e) {
                     Log.d("JSON", "Failed to parse track data: " + e);
