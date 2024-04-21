@@ -2,12 +2,14 @@ package com.example.wrapped;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,43 @@ public class TopTracksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_tracks);
 
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopTrack1 = findViewById(R.id.cardTopTrack1);
+        AnimationDrawable animationDrawable1 = (AnimationDrawable) cardTopTrack1.getBackground();
+        animationDrawable1.setEnterFadeDuration(1000);
+        animationDrawable1.setExitFadeDuration(1000);
+        animationDrawable1.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopTrack2 = findViewById(R.id.cardTopTrack2);
+        AnimationDrawable animationDrawable2 = (AnimationDrawable) cardTopTrack2.getBackground();
+        animationDrawable2.setEnterFadeDuration(1000);
+        animationDrawable2.setExitFadeDuration(1000);
+        animationDrawable2.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopTrack3 = findViewById(R.id.cardTopTrack3);
+        AnimationDrawable animationDrawable3 = (AnimationDrawable) cardTopTrack3.getBackground();
+        animationDrawable3.setEnterFadeDuration(1000);
+        animationDrawable3.setExitFadeDuration(1000);
+        animationDrawable3.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopTrack4 = findViewById(R.id.cardTopTrack4);
+        AnimationDrawable animationDrawable4 = (AnimationDrawable) cardTopTrack4.getBackground();
+        animationDrawable4.setEnterFadeDuration(1000);
+        animationDrawable4.setExitFadeDuration(1000);
+        animationDrawable4.start();
+
+        // Animated gradient background that can change from one color to another
+        LinearLayout cardTopTrack5 = findViewById(R.id.cardTopTrack5);
+        AnimationDrawable animationDrawable5 = (AnimationDrawable) cardTopTrack5.getBackground();
+        animationDrawable5.setEnterFadeDuration(1000);
+        animationDrawable5.setExitFadeDuration(1000);
+        animationDrawable5.start();
+
+
         String[] topArtists = getIntent().getStringArrayExtra("topArtists");
         String[] topArtistPics = getIntent().getStringArrayExtra("topArtistPics");
         String[] recArtists = getIntent().getStringArrayExtra("recArtists");
@@ -47,7 +86,7 @@ public class TopTracksActivity extends AppCompatActivity {
 
         playTrack(trackURIs[1]);
 
-        TextView topTracksTextView = findViewById(R.id.top_tracks_text_view);
+        //TextView topTracksTextView = findViewById(R.id.top_tracks_text_view);
         Button toSummaryBtn = findViewById(R.id.to_summary_btn);
 
         toSummaryBtn.setOnClickListener(new View.OnClickListener() {
@@ -65,12 +104,33 @@ public class TopTracksActivity extends AppCompatActivity {
             }
         });
 
+        TextView topTrack1 = findViewById(R.id.topTrack1);
+        TextView topTrack2 = findViewById(R.id.topTrack2);
+        TextView topTrack3 = findViewById(R.id.topTrack3);
+        TextView topTrack4 = findViewById(R.id.topTrack4);
+        TextView topTrack5 = findViewById(R.id.topTrack5);
+
         if (topTracks != null) {
             String joinedTopTracks = TextUtils.join(", ", topTracks);
-            topTracksTextView.setText(joinedTopTracks);
+            //topTracksTextView.setText(joinedTopTracks);
+
+            String[] words = joinedTopTracks.split(", ");
+
+            topTrack1.setText("#1  " + words[0]);
+            topTrack2.setText("#2  " + words[1]);
+            topTrack3.setText("#3  " + words[2]);
+            topTrack4.setText("#4  " + words[3]);
+            topTrack5.setText("#5  " + words[4]);
+
         } else {
             String ans="No top songs data available";
-            topTracksTextView.setText(ans);
+            //topTracksTextView.setText(ans);
+
+            topTrack1.setText(ans);
+            topTrack2.setText(ans);
+            topTrack3.setText(ans);
+            topTrack4.setText(ans);
+            topTrack5.setText(ans);
         }
     }
 
