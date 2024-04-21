@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class TempActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button button, settings;
+    Button button, settings, continueToStart;
     TextView textView, tv2;
     FirebaseUser user;
 
@@ -43,6 +43,7 @@ public class TempActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
 
         settings = findViewById(R.id.settings);
+        continueToStart = findViewById(R.id.continue_to_start);
 
         SignedInUser.validateCurrentUser();
 
@@ -73,6 +74,15 @@ public class TempActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        continueToStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(intent);
                 finish();
             }

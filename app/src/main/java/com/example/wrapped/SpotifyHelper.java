@@ -38,8 +38,6 @@ public class SpotifyHelper {
 
     public static final String CLIENT_ID = "8ad7f759bc9a41f4bd4e9e7d1cca7199";
     public static final String REDIRECT_URI = "com.example.wrapped://auth";
-    private static final String CLIENT_SECRET = "a67352448696462fa8606624cb569101";
-    private static final int REQUEST_CODE = 1337;
     private static final String[] SCOPES = {"user-read-recently-played", "user-library-modify", "user-read-email"," user-read-private"};
     public static final int AUTH_TOKEN_REQUEST_CODE = 0;
     public static final int AUTH_CODE_REQUEST_CODE = 1;

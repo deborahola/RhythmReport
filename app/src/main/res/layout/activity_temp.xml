@@ -50,9 +50,9 @@
         <Button
             android:layout_width="40mm"
             android:layout_height="11mm"
-            android:id="@+id/start"
+            android:id="@+id/continue_to_start"
             android:layout_marginTop="25dp"
-            android:text="Start!"
+            android:text="Continue!"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25sp"
