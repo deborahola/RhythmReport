@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    android:padding="30dp"
+    android:id="@+id/activity_past_summaries"
+    tools:context=".PastSummaries">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RhythmReport"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            style="@style/bold" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="Past  Summaries"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="@style/light" />
+
+        <Button
+            android:layout_width="40mm"
+            android:layout_height="11mm"
+            android:id="@+id/back2Home"
+            android:layout_marginTop="23dp"
+            android:text="Back to Home"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
+
+
+        <!-- Insert other UI for past summaries here -->
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".PastSummaries">-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
