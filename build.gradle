@@ -6,3 +6,9 @@ buildscript {
 plugins {
     id 'com.android.application' version '8.2.1' apply false
 }
+
+android {
+	linkOptions {
+		abortOnError false
+	}
+}
