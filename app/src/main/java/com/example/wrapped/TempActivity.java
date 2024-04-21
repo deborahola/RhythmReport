@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class TempActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button button;
+    Button button, settings;
     TextView textView, tv2;
     FirebaseUser user;
 
@@ -41,6 +41,8 @@ public class TempActivity extends AppCompatActivity {
         textView = findViewById(R.id.user_email);
         tv2 = findViewById(R.id.spotify_username);
         user = auth.getCurrentUser();
+
+        settings = findViewById(R.id.settings);
 
         SignedInUser.validateCurrentUser();
 
@@ -66,5 +68,15 @@ public class TempActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }

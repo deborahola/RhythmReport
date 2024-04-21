@@ -67,14 +67,14 @@
             android:text="View  Past  Summaries"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="19sp"
+            android:textSize="17sp"
             android:paddingBottom="13dp"
             style="@style/extrabold" />
 
         <Button
             android:layout_width="40mm"
             android:layout_height="11mm"
-            android:id="@+id/setting"
+            android:id="@+id/settings"
             android:layout_marginTop="10dp"
             android:text="Settings"
             android:textAlignment="center"
