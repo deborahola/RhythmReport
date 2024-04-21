@@ -3,9 +3,11 @@ package com.example.wrapped;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,10 +26,20 @@ public class TempActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temp);
 
+
+        RelativeLayout relativeLayout = findViewById(R.id.activity_temp);
+
+        // Animated gradient background that can change from one color to another
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(1000);
+        animationDrawable.setExitFadeDuration(1000);
+        animationDrawable.start();
+
+
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-        textView = findViewById(R.id.user_details);
-        tv2 = findViewById(R.id.tv2);
+        textView = findViewById(R.id.user_email);
+        tv2 = findViewById(R.id.spotify_username);
         user = auth.getCurrentUser();
 
         SignedInUser.validateCurrentUser();

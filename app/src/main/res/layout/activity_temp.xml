@@ -1,32 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    android:padding="30dp"
+    android:id="@+id/activity_temp"
     tools:context=".TempActivity">
 
-    <TextView
-        android:id="@+id/user_details"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="Hello World!" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv2"
-        android:textSize="30dp"
-        android:text="Hello World!" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RhythmReport"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            style="@style/bold" />
 
-    <Button
-        android:id="@+id/logout"
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="logout" />
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="@style/light" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/spotify_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Spotify Username"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="@style/light" />
+
+        <Button
+            android:layout_width="40mm"
+            android:layout_height="11mm"
+            android:id="@+id/start"
+            android:layout_marginTop="25dp"
+            android:text="Start!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
+
+        <Button
+            android:layout_width="40mm"
+            android:layout_height="11mm"
+            android:id="@+id/past_summaries"
+            android:layout_marginTop="10dp"
+            android:text="View  Past  Summaries"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
+
+        <Button
+            android:layout_width="40mm"
+            android:layout_height="11mm"
+            android:id="@+id/setting"
+            android:layout_marginTop="10dp"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
+
+        <Button
+            android:layout_width="40mm"
+            android:layout_height="11mm"
+            android:id="@+id/logout"
+            android:layout_marginTop="10dp"
+            android:text="Sign  Out"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:paddingBottom="13dp"
+            style="@style/extrabold" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/music_player_playback_navigation" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
