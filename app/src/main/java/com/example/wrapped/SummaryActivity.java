@@ -81,19 +81,25 @@ public class SummaryActivity extends AppCompatActivity {
         String imageUrl = topArtistPics[0];
         Picasso.get().load(imageUrl).into(firstPic);
 
-        sumArtist1.setText("  1. "+topArtists[0]);
-        sumArtist2.setText("  2. "+topArtists[1]);
-        sumArtist3.setText("  3. "+topArtists[2]);
-        sumArtist4.setText("  4. "+topArtists[3]);
-        sumArtist5.setText("  5. "+topArtists[4]);
+        // desired max length 4 strings "topArtists[index]", "topTracks[index]", "topGenres[index]"
+        int maxLength = 13;
 
-        sumTrack1.setText("  1. "+topTracks[0]);
-        sumTrack2.setText("  2. "+topTracks[1]);
-        sumTrack3.setText("  3. "+topTracks[2]);
-        sumTrack4.setText("  4. "+topTracks[3]);
-        sumTrack5.setText("  5. "+topTracks[4]);
+        // set artist text with truncation if necessary
+        sumArtist1.setText("  1. " + shortenText(topArtists[0], maxLength));
+        sumArtist2.setText("  2. " + shortenText(topArtists[1], maxLength));
+        sumArtist3.setText("  3. " + shortenText(topArtists[2], maxLength));
+        sumArtist4.setText("  4. " + shortenText(topArtists[3], maxLength));
+        sumArtist5.setText("  5. " + shortenText(topArtists[4], maxLength));
 
-        sumGenre1.setText("  "+ topGenres[0]);
+        // set track text with truncation if necessary
+        sumTrack1.setText("  1. " + shortenText(topTracks[0], maxLength));
+        sumTrack2.setText("  2. " + shortenText(topTracks[1], maxLength));
+        sumTrack3.setText("  3. " + shortenText(topTracks[2], maxLength));
+        sumTrack4.setText("  4. " + shortenText(topTracks[3], maxLength));
+        sumTrack5.setText("  5. " + shortenText(topTracks[4], maxLength));
+
+        // set genre text with truncation if necessary
+        sumGenre1.setText("  " + shortenText(topGenres[0], maxLength));
 
         shareBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,6 +131,26 @@ public class SummaryActivity extends AppCompatActivity {
 
             }
         });
+
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TempActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+    }
+
+    // Helper function to shorten text with "..."
+    public static String shortenText(String text, int maxLength) {
+        if (text.length() > maxLength) {
+            return text.substring(0, maxLength - 3) + "...";
+        } else {
+            return text;
+        }
     }
 
     public void playTrack(String trackURI) {

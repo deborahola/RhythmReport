@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="25dp"
     tools:context=".SummaryActivity"
     android:background="@drawable/mountain">
 
@@ -13,9 +14,9 @@
 
     <ImageView
         android:id="@+id/firstPic"
-        android:layout_width="640px"
-        android:layout_height="640px"
-        android:layout_marginTop="20dp"
+        android:layout_width="550px"
+        android:layout_height="550px"
+        android:layout_marginTop="5dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/lists_container"
@@ -30,7 +31,7 @@
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstPic">
@@ -40,6 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingRight="10dp"
             android:orientation="vertical">
 
             <!-- Text Boxes for Left List -->
@@ -52,17 +54,19 @@
                 android:text="Top Artists"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="34sp"
+                android:textSize="28sp"
+                style="@style/extrabold"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sumArtist1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:text="1"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -72,7 +76,8 @@
                 android:layout_marginTop="12dp"
                 android:text="2"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -82,7 +87,8 @@
                 android:layout_marginTop="12dp"
                 android:text="3"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -92,7 +98,8 @@
                 android:layout_marginTop="12dp"
                 android:text="4"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -102,22 +109,28 @@
                 android:layout_marginTop="12dp"
                 android:text="5"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/shareBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="51dp"
                 android:layout_gravity="bottom"
-                android:layout_marginTop="70dp"
-                android:text="Share Your Wrap" />
+                android:layout_marginTop="37px"
+                android:textColor="@color/white"
+                style="@style/bold"
+                android:text="Share  Your  Wrap" />
 
             <Button
                 android:id="@+id/homeBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="51dp"
                 android:layout_gravity="bottom"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white"
+                style="@style/bold"
                 android:text="Home" />
         </LinearLayout>
 
@@ -126,6 +139,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingLeft="12dp"
             android:orientation="vertical">
 
             <TextView
@@ -135,17 +149,19 @@
                 android:text="Top Songs"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="34sp"
+                android:textSize="28sp"
+                style="@style/extrabold"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sumTrack1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:text="1"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -156,6 +172,7 @@
                 android:text="2"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -166,6 +183,7 @@
                 android:text="3"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -176,6 +194,7 @@
                 android:text="4"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <TextView
@@ -186,14 +205,15 @@
                 android:text="5"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="100px"
-                android:layout_height="100px"
+                android:layout_width="80px"
+                android:layout_height="80px"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="130px"
+                android:layout_marginTop="35px"
                 app:srcCompat="@drawable/star" />
 
             <TextView
@@ -201,18 +221,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Top Genre:"
+                android:layout_marginTop="18px"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="25sp"
+                style="@style/extrabold"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sumGenre1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="17sp"
+                style="@style/bold"
                 android:textStyle="bold" />
 
         </LinearLayout>
