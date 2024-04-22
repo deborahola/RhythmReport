@@ -76,6 +76,8 @@ public class SummaryActivity extends AppCompatActivity {
         TextView sumTrack4 = findViewById(R.id.sumTrack4);
         TextView sumTrack5 = findViewById(R.id.sumTrack5);
         TextView sumGenre1 = findViewById(R.id.sumGenre1);
+        File imagePath = new File(getExternalFilesDir(null), "screenshot.png");
+        SignedInUser.addWrapped(imagePath);
 
         ImageView firstPic = findViewById(R.id.firstPic);
         String imageUrl = topArtistPics[0];
@@ -111,7 +113,6 @@ public class SummaryActivity extends AppCompatActivity {
                 rootView.setDrawingCacheEnabled(false);
 
 // Save the Bitmap to a file
-                File imagePath = new File(getExternalFilesDir(null), "screenshot.png");
                 try {
                     FileOutputStream fos = new FileOutputStream(imagePath);
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);

@@ -1,228 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    android:gravity="center"
-    android:padding="18dp"
-    android:id="@+id/activity_top_tracks"
     tools:context=".TopTracksActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/top_tracks_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your  Top  Songs"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            style="@style/extrabold" />
+            android:layout_margin="8dp"
+            tools:text="Token:" />
 
-
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="7dp"
-            android:layout_marginTop="3dp"
-            app:cardUseCompatPadding="true">
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/to_summary_btn"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_list"
-                android:id="@+id/cardTopTrack1"
-                android:orientation="vertical"
-                android:padding="16dp">
-                <TextView
-                    android:id="@+id/topTrack1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="1"
-                    style="@style/bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:text="to Spotify Wrapped Summary" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="7dp"
-            app:cardUseCompatPadding="true">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_list"
-                android:id="@+id/cardTopTrack2"
-                android:orientation="vertical"
-                android:padding="16dp">
-                <TextView
-                    android:id="@+id/topTrack2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="2"
-                    style="@style/bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="7dp"
-            app:cardUseCompatPadding="true">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_list"
-                android:id="@+id/cardTopTrack3"
-                android:orientation="vertical"
-                android:padding="16dp">
-                <TextView
-                    android:id="@+id/topTrack3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="3"
-                    style="@style/bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="7dp"
-            app:cardUseCompatPadding="true">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_list"
-                android:id="@+id/cardTopTrack4"
-                android:orientation="vertical"
-                android:padding="16dp">
-                <TextView
-                    android:id="@+id/topTrack4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="4"
-                    style="@style/bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="7dp"
-            app:cardUseCompatPadding="true">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_list"
-                android:id="@+id/cardTopTrack5"
-                android:orientation="vertical"
-                android:padding="16dp">
-                <TextView
-                    android:id="@+id/topTrack5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="5"
-                    style="@style/bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:layout_width="35mm"
-            android:layout_height="15mm"
-            android:id="@+id/to_summary_btn"
-            android:text="Summary   →"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:paddingBottom="45dp"
-            style="@style/extrabold" />
-
+        </LinearLayout>
     </LinearLayout>
 
-
-</RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".TopTracksActivity">-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="vertical">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/top_tracks_text_view"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="8dp"-->
-<!--            tools:text="Token:" />-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-<!--            <Button-->
-<!--                android:id="@+id/to_summary_btn"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_vertical"-->
-<!--                android:layout_margin="8dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:text="to Spotify Wrapped Summary" />-->
-
-<!--        </LinearLayout>-->
-<!--    </LinearLayout>-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

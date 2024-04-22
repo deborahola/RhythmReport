@@ -2,12 +2,18 @@ package com.example.wrapped;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class SignedInUser {
 
     static public SignedInUser user;
     private final String email;
     private final String spotifyUser;
+    private ArrayList<File> pastWrappeds;
 
     /**
      * Constructor for a signed in user. Private due to use of the singleton pattern
@@ -28,6 +34,7 @@ public class SignedInUser {
         if (email == null || spotifyUser == null) {
             return;
         }
+        //Pull list of wrappeds from the database and set pastWrappeds to that
         user = new SignedInUser(email, spotifyUser);
     }
 
@@ -44,10 +51,14 @@ public class SignedInUser {
     }
 
     /**
-     * Sets user to null
+     * Sets user to null and updates the saved list of past wrappeds
      * Only used when user is signed out
      */
     static public void SignUserOut() {
+        //Replace the list of saved wrappeds in the database with the current one
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference(user.email);
+        myRef.setValue(user.pastWrappeds);
         user = null;
     }
 
@@ -79,5 +90,24 @@ public class SignedInUser {
             return null;
         }
         return user.spotifyUser;
+    }
+
+    /**
+     * Add a wrapped file to the list of past wrappeds for an account
+     * @param screenshot file of the current wrapped
+     */
+    static public void addWrapped(File screenshot) {
+        if (user.pastWrappeds == null) {
+            user.pastWrappeds = new ArrayList<File>();
+        }
+        user.pastWrappeds.add(screenshot);
+    }
+
+    /**
+     * Getter for list of past wrappeds
+     * @return List of past wrappeds
+     */
+    static public ArrayList<File> getPastWrappeds() {
+        return user.pastWrappeds;
     }
 }

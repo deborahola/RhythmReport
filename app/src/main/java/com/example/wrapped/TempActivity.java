@@ -41,10 +41,10 @@ public class TempActivity extends AppCompatActivity {
         textView = findViewById(R.id.user_email);
         tv2 = findViewById(R.id.spotify_username);
         user = auth.getCurrentUser();
+        pastSummaries = findViewById(R.id.past_summaries);
 
         settings = findViewById(R.id.settings);
         continueToStart = findViewById(R.id.continue_to_start);
-        pastSummaries = findViewById(R.id.past_summaries);
 
         SignedInUser.validateCurrentUser();
 
@@ -84,15 +84,6 @@ public class TempActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        pastSummaries.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PastSummaries.class);
                 startActivity(intent);
                 finish();
             }
